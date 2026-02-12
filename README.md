@@ -38,17 +38,15 @@ Evaluation: Validate model performance and prevent data leakage.
 
 Raw healthcare datasets contain inconsistencies and missing values.
 
-✔ Median imputation for numerical features
-
+✔ Median imputation for numerical features 
 ✔ Mode imputation for categorical features
-
 ✔ Standardised target labels (Yes / No → 1 / 0)
 
 2️⃣ Feature Engineering 🔧
 
 Ordinal Encoding
 
-Education level encoded with logical hierarchy
+Education level encoded with a logical hierarchy
 Uneducated < Primary < Graduate < Postgraduate
 
 One-Hot Encoding
@@ -63,7 +61,7 @@ MinMax Scaling applied to ensure compatibility with:
 
 Chi-Square statistical feature selection
 
-Distance-based modeling
+Distance-based modelling
 
 4️⃣ Feature Selection 📊
 
