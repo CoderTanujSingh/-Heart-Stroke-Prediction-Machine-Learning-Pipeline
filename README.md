@@ -1,136 +1,154 @@
 # 🫀 Heart-Stroke-Prediction (ML Pipeline Project)
 ### 📌 Project Title
-### Heart Stroke Prediction Machine Learning Pipeline
+# ❤️ Predicting the Invisible: Heart Stroke ML Pipeline 🚑⚡
 
+Welcome to my end-to-end Machine Learning project where clinical data meets structured ML engineering.
 
-📖 Project Overview
+In this repository, I built a complete production-style ML pipeline to predict heart-stroke risk using demographic, lifestyle, and medical attributes.
 
-This project focuses on building an end-to-end Machine Learning pipeline to predict the likelihood of heart stroke based on patient clinical and lifestyle data.
+This project focuses not just on modelling, but on building a clean, modular, no-data-leakage pipeline architecture.
 
-The objective is to demonstrate:
+Ready to explore the implementation? Check out the Jupyter Notebook
+!
 
-Data preprocessing using ColumnTransformer
+<table> <tr> <td width="55%" valign="top">
+🧠 The Big Picture: ML Pipeline Architecture
 
-Handling missing values with proper imputation strategies
+This project follows a structured ML workflow inspired by CRISP-DM methodology:
 
-Ordinal & One-Hot Encoding
+Problem Understanding: Can we predict heart stroke risk early?
 
-Feature Scaling
+Data Understanding: Explore health, demographic & lifestyle attributes.
 
-Feature Selection using Chi-Square
+Data Preparation: Handle missing values, encode categories, scale features.
 
-Model training using Decision Tree Classifier
+Feature Selection: Identify statistically significant predictors.
 
-Clean, production-ready ML Pipeline architecture
+Modeling: Train classification model using Decision Tree.
 
-This project emphasizes building a modular, scalable, and interview-ready ML workflow.
+Evaluation: Validate model performance and prevent data leakage.
 
-📂 Dataset Description
+</td> <td width="45%" align="left">
+<img src="ml_pipeline_flow.png" alt="ML Pipeline Flow" width="350"/> </td> </tr> </table>
+🛠️ The ML Engineering Roadmap
+1️⃣ Data Cleaning & Preparation 🧼
 
-The dataset contains patient health records including:
+Raw healthcare datasets contain inconsistencies and missing values.
 
-Demographic information (Gender, Age, Education)
+✔ Median imputation for numerical features
+✔ Mode imputation for categorical features
+✔ Standardized target labels (Yes / No → 1 / 0)
 
-Lifestyle indicators (Smoking habits)
-
-Clinical measurements (Cholesterol, BP, BMI, Glucose)
-
-Medical history (Diabetes, Hypertension, Stroke history)
-
-Target Variable:
-
-HeartStroke → Binary classification (Yes / No)
-
-⚙️ ML Workflow
-1️⃣ Data Cleaning
-
-Standardized target labels
-
-Converted target into binary format (0 / 1)
-
-Handled missing values:
-
-Median imputation for numerical features
-
-Most frequent imputation for categorical features
-
-2️⃣ Feature Engineering
+2️⃣ Feature Engineering 🔧
 
 Ordinal Encoding
 
-Education level encoded based on natural hierarchy
+Education level encoded with logical hierarchy
 Uneducated < Primary < Graduate < Postgraduate
 
-One Hot Encoding
+One-Hot Encoding
 
 Gender
 
 Previous Stroke History
 
+3️⃣ Feature Scaling ⚖️
+
+MinMax Scaling applied to ensure compatibility with:
+
+Chi-Square statistical feature selection
+
+Distance-based modeling
+
+4️⃣ Feature Selection 📊
+
+Applied:
+
+SelectKBest
+
+Chi-Square statistical test
+
+Goal: Reduce noise and improve model interpretability.
+
+5️⃣ Model Training 🌳
+
+Algorithm Used:
+
+Decision Tree Classifier
+
+Why Decision Tree?
+
+Handles non-linear relationships
+
+Interpretable
+
+Works well with structured healthcare data
+
+📊 Dataset Overview
+
+The dataset includes:
+
+Age
+
+Smoking habits
+
+Blood Pressure (Systolic / Diastolic)
+
+Cholesterol levels
+
+BMI
+
+Glucose
+
+Diabetes & Hypertension indicators
+
+Education level
+
+Previous stroke history
+
+Target Variable:
+
+HeartStroke (Binary Classification)
+
+💡 Key Observations
+
+Smoking and systolic BP show a strong influence.
+
+Glucose variability correlates with higher risk segments.
+
+Hypertension significantly impacts classification splits.
+
+Education & lifestyle factors contribute to secondary signal strength.
+
+🏗️ Production-Ready Architecture
+
+The entire workflow is built inside a single Scikit-Learn Pipeline:
+
+ColumnTransformer
+
+Encoding
+
 Scaling
 
-MinMax Scaling applied (required for Chi-Square feature selection)
+Feature Selection
 
-3️⃣ Feature Selection
+Model Training
 
-Applied SelectKBest using Chi-Square test
+This ensures:
 
-Selected top predictive features
+✔ No data leakage
+✔ Clean deployment capability
+✔ Reproducibility
+✔ Easy model serialisation using Pickle
 
-4️⃣ Model Training
-
-Algorithm Used: Decision Tree Classifier
-
-Fully integrated inside sklearn Pipeline
-
-Ensures no data leakage
-
-🧠 Why This Project Matters
-
-This project demonstrates:
-
-Strong understanding of ML pipeline architecture
-
-Clean preprocessing strategy using ColumnTransformer
-
-Proper handling of categorical hierarchies
-
-Feature selection using statistical methods
-
-Reproducible modeling workflow
-
-🛠 Tech Stack
-
-Python
-
-Pandas
-
-NumPy
-
-Scikit-Learn
-
-Matplotlib / Seaborn
-
-📊 Potential Improvements
+🚀 Future Improvements
 
 Hyperparameter tuning (GridSearchCV)
 
-Compare multiple models (Logistic Regression, Random Forest, XGBoost)
+Model comparison (Logistic, Random Forest, XGBoost)
 
-Cross-validation
+ROC-AUC optimization
 
-ROC-AUC evaluation
+SHAP for explainability
 
-SHAP for model explainability
-
-🚀 Future Scope
-
-This pipeline can be extended into:
-
-Real-time health risk scoring API
-
-Streamlit web application
-
-Power BI dashboard for clinical analytics
-
-Healthcare decision support system
+Streamlit deployment for real-time predictions
