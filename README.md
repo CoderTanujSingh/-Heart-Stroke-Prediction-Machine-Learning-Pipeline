@@ -40,6 +40,7 @@ Raw healthcare datasets contain inconsistencies and missing values.
 
 ✔ Median imputation for numerical features 
 ✔ Mode imputation for categorical features
+
 ✔ Standardised target labels (Yes / No → 1 / 0)
 
 2️⃣ Feature Engineering 🔧
