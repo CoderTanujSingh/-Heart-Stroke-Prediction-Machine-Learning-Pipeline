@@ -1,4 +1,4 @@
-# 🫀-Heart-Stroke-Prediction (ML Pipeline Project)
+# 🫀 Heart-Stroke-Prediction (ML Pipeline Project)
 ### 📌 Project Title
 ### Heart Stroke Prediction Machine Learning Pipeline
 
