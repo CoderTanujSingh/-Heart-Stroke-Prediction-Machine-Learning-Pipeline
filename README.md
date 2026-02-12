@@ -20,24 +20,29 @@ Problem Understanding: Can we predict heart stroke risk early?
 
 Data Understanding: Explore health, demographic & lifestyle attributes.
 
-Data Preparation: Handle missing values, encode categories, scale features.
+Data Preparation: Handle missing values, encode categorical variables, and scale features.
 
 Feature Selection: Identify statistically significant predictors.
 
-Modeling: Train classification model using Decision Tree.
+Modelling: Train a classification model using a Decision Tree.
 
 Evaluation: Validate model performance and prevent data leakage.
 
 </td> <td width="45%" align="left">
-<img src="ml_pipeline_flow.png" alt="ML Pipeline Flow" width="350"/> </td> </tr> </table>
+  
+<img src="heart_pipeline.png" alt="ML Pipeline Flow" width="350"/> </td> </tr> </table>
+
 🛠️ The ML Engineering Roadmap
+
 1️⃣ Data Cleaning & Preparation 🧼
 
 Raw healthcare datasets contain inconsistencies and missing values.
 
 ✔ Median imputation for numerical features
+
 ✔ Mode imputation for categorical features
-✔ Standardized target labels (Yes / No → 1 / 0)
+
+✔ Standardised target labels (Yes / No → 1 / 0)
 
 2️⃣ Feature Engineering 🔧
 
